@@ -1,0 +1,19 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "error-could-not-read-data" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Well, dang… There was an error loading your recipes. Please try again!"
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+
+    }
+  },
+  "version" : "1.0"
+}

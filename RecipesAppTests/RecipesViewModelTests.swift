@@ -53,7 +53,7 @@ final class RecipesViewModelTests: XCTestCase {
         await viewModel.loadRecipes(apiEndpoint: .malformed)
         
         if case let .error(error) = viewModel.state {
-            print(error)
+            XCTAssertEqual(error.localizedDescription, "Well, dang… There was an error loading your recipes. Please try again!")
         } else {
             XCTFail("loadRecipes(apiEndpoint: .malformed) did not complete with 'error' state")
         }

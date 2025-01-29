@@ -39,7 +39,7 @@ class RecipesViewModel: ObservableObject {
         case .success(let recipes):
             state = recipes.recipes.isEmpty ? .empty : .success(recipes.recipes)
         case .failure(let error):
-            state = .error(error)
+            state = .error(error is DecodingError ? RecipesError.malformedData : error)
         }
     }
 }
