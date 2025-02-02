@@ -50,17 +50,25 @@ final class RecipesViewModelTests: XCTestCase {
     }
     
     func testLoadRecipesMalformed() async {
-        await viewModel.loadRecipes(apiEndpoint: .malformed)
+        viewModel.apiEndpoint = .malformed
+        await viewModel.loadRecipes()
         
+        let expectedErrorText = """
+Well, dang…
+There was an error loading your recipes.
+Please try again!
+"""
+
         if case let .error(error) = viewModel.state {
-            XCTAssertEqual(error.localizedDescription, "Well, dang… There was an error loading your recipes. Please try again!")
+            XCTAssertEqual(error.localizedDescription, expectedErrorText)
         } else {
             XCTFail("loadRecipes(apiEndpoint: .malformed) did not complete with 'error' state")
         }
     }
     
     func testLoadRecipesEmpty() async {
-        await viewModel.loadRecipes(apiEndpoint: .empty)
+        viewModel.apiEndpoint = .empty
+        await viewModel.loadRecipes()
         
         XCTAssertTrue(viewModel.state.isEmpty)
     }

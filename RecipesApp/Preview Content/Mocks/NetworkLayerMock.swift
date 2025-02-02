@@ -6,7 +6,6 @@
 //
 
 import Foundation
-@testable import RecipesApp
 
 class NetworkLayerMock: NetworkLayer {
     

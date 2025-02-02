@@ -1,18 +1,35 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "empty-list-message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No recipes to show…\nLet’s cook up something!"
+          }
+        }
+      }
+    },
     "error-could-not-read-data" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Well, dang… There was an error loading your recipes. Please try again!"
+            "value" : "Well, dang…\nThere was an error loading your recipes.\nPlease try again!"
           }
         }
       }
     },
-    "Hello, World!" : {
-
+    "recipes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recipes"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
